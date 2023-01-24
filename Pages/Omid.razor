@@ -1,0 +1,21 @@
+@page "/omid"
+
+<PageTitle>Test Omid</PageTitle>
+
+<h1>My Age : </h1>
+<input type="text" @bind="age"/>
+<button @onclick="showAge">Show</button>
+
+
+@code
+{
+    private int age {get ; set; }
+
+    private void showAge()
+    {
+        Console.WriteLine("My Age :" + age);
+        age = 155;
+        //Console.WriteLine(age);
+    }
+
+}
